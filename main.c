@@ -5,7 +5,7 @@
 ** Login   <peixot_b@epitech.net>
 ** 
 ** Started on  Tue Feb  9 15:12:04 2016 Peixoto Benjamin
-** Last update Tue Feb  9 18:00:44 2016 Peixoto Benjamin
+** Last update Thu Feb 18 15:49:01 2016 Peixoto Benjamin
 */
 
 #include <stdlib.h>
@@ -51,7 +51,7 @@ void	print_game_board(int *line)
   int	i;
   int	nb_space;
 
-  i = 0; 
+  i = 0;
   my_putstr("*********\n");
   while (i < 4)
     {
@@ -59,7 +59,7 @@ void	print_game_board(int *line)
       print_match(line[i], nb_space);
       i = i + 1;
     }
-  my_putstr("*********\n");
+  my_putstr("*********\n\n");
 }
 
 int	main()
@@ -77,4 +77,6 @@ int	main()
   line[2] = 5;
   line[3] = 7;
   print_game_board(line);
+  my_game(line);
+  free(line);
 }

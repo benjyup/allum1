@@ -5,7 +5,7 @@
 ## Login   <peixot_b@epitech.net>
 ## 
 ## Started on  Tue Feb  9 15:10:08 2016 Peixoto Benjamin
-## Last update Tue Feb  9 15:10:42 2016 Peixoto Benjamin
+## Last update Wed Feb 17 23:49:13 2016 Peixoto Benjamin
 ##
 
 NAME		=	allum1
@@ -16,7 +16,10 @@ LDFLAGS		+= -I./include -L./lib -lmy
 
 RM		=	rm -f
 
-SRCS		=	main.c
+SRCS		=	main.c \
+			my_game.c \
+			first_player.c \
+			second_player.c
 
 OBJS		=	$(SRCS:.c=.o)
 

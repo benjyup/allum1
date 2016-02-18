@@ -5,7 +5,7 @@
 ## Login   <peixot_b@epitech.net>
 ## 
 ## Started on  Mon Nov 23 12:40:09 2015 Peixoto Benjamin
-## Last update Tue Feb  9 15:11:38 2016 Peixoto Benjamin
+## Last update Thu Feb 18 14:19:18 2016 Peixoto Benjamin
 ##
 
 
@@ -21,7 +21,9 @@ SRCS	= my_printf.c \
 	 my_put_nbr_unsigned.c \
 	 my_putstr.c \
 	 my_revstr.c \
-	 my_strlen.c
+	 my_strlen.c \
+	 get_next_line.c \
+	 my_int_to_char.c
 
 NAME	= libmy.a
 

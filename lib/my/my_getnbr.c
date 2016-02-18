@@ -5,7 +5,7 @@
 ** Login   <peixot_b@epitech.net>
 ** 
 ** Started on  Wed Nov  4 13:59:10 2015 Peixoto Benjamin
-** Last update Mon Nov 16 16:21:08 2015 Peixoto Benjamin
+** Last update Thu Feb 18 00:00:04 2016 Peixoto Benjamin
 */
 
 int	my_getnbr(char *str)
