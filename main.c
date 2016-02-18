@@ -5,10 +5,12 @@
 ** Login   <peixot_b@epitech.net>
 ** 
 ** Started on  Tue Feb  9 15:12:04 2016 Peixoto Benjamin
-** Last update Thu Feb 18 15:49:01 2016 Peixoto Benjamin
+** Last update Fri Feb 19 00:03:01 2016 Peixoto Benjamin
 */
 
 #include <stdlib.h>
+#include <stdio.h>
+#include "allum1.h"
 
 void	print_space(int nb_match, int nb_space, int j)
 {

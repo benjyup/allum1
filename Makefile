@@ -5,21 +5,22 @@
 ## Login   <peixot_b@epitech.net>
 ## 
 ## Started on  Tue Feb  9 15:10:08 2016 Peixoto Benjamin
-## Last update Wed Feb 17 23:49:13 2016 Peixoto Benjamin
+## Last update Thu Feb 18 23:08:15 2016 Peixoto Benjamin
 ##
 
 NAME		=	allum1
 
 CC		=	gcc
 
-LDFLAGS		+= -I./include -L./lib -lmy
+LDFLAGS		+= -L./lib -lmy -I./
 
 RM		=	rm -f
 
 SRCS		=	main.c \
 			my_game.c \
 			first_player.c \
-			second_player.c
+			second_player.c \
+			my_game_err.c
 
 OBJS		=	$(SRCS:.c=.o)
 

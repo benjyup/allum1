@@ -5,7 +5,7 @@
 ** Login   <peixot_b@epitech.net>
 ** 
 ** Started on  Thu Feb 18 13:36:40 2016 Peixoto Benjamin
-** Last update Thu Feb 18 14:19:02 2016 Peixoto Benjamin
+** Last update Fri Feb 19 00:11:22 2016 Peixoto Benjamin
 */
 
 #include <stdlib.h>
@@ -34,6 +34,6 @@ char	*my_int_to_char(int nbr, int s, int i, int j)
     }
   if (j)
     str[0] = '-';
-  str[s+j] = '\0';
+  str[s + j] = '\0';
   return (str);
 }

@@ -5,10 +5,11 @@
 ** Login   <peixot_b@epitech.net>
 ** 
 ** Started on  Wed Feb 17 23:03:18 2016 Peixoto Benjamin
-** Last update Thu Feb 18 15:49:31 2016 Peixoto Benjamin
+** Last update Fri Feb 19 00:05:35 2016 Peixoto Benjamin
 */
 
 #include <stdlib.h>
+#include "allum1.h"
 
 int	computer(int *line, int count_line, int i)
 {
@@ -35,17 +36,6 @@ int	computer(int *line, int count_line, int i)
 	}
       i = i + 1;
     }
-}
-
-void	my_ia_bot(int *line)
-{
-  /* a remplacer dans secondplayer */
-  int	i;
-  int	count_line;
-
-  i = 0;
-  count_line = how_many_line_remaining(line);
-  computer(line, count_line, i);
 }
 
 int	remove_partially_matches(int *line, int nb_line)
@@ -76,6 +66,11 @@ int	second_player(int *line)
 {
   int	count_line;
 
+  if (how_many_line_remaining(line) == 0)
+    {
+      my_putstr("You lost, too bad..\n");
+      return (EXIT_SUCCESS);
+    }
   count_line = how_many_line_remaining(line);
   if (count_line == 0)
     exit (0);
@@ -83,5 +78,8 @@ int	second_player(int *line)
   if (count_line == 5)
     remove_all_matches(line, 0);
   if (count_line < 5)
-    my_ia_bot(line);
+    {
+      count_line = how_many_line_remaining(line);
+      computer(line, count_line, 0);
+    }
 }
