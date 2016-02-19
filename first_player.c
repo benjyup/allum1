@@ -5,7 +5,7 @@
 ** Login   <peixot_b@epitech.net>
 ** 
 ** Started on  Wed Feb 17 22:31:01 2016 Peixoto Benjamin
-** Last update Fri Feb 19 11:58:36 2016 Peixoto Benjamin
+** Last update Fri Feb 19 12:43:42 2016 Peixoto Benjamin
 */
 
 #include <stdlib.h>
@@ -70,21 +70,25 @@ int     what_line(int *line)
     {
       my_putstr("Line: ");
       if ((str = get_next_line(0)) == NULL)
-	return (-1);
+	return (-2);
       line_choice = my_line_is_a_nb(str);
+      if (line[line_choice] == 0)
+	my_putstr("Error: this line is empty\n");
       if (line_choice > 0 && line_choice < 6 && line[line_choice - 1] != 0)
 	return (line_choice - 1);
     }
 }
 
-void    first_player(int *line)
+int     first_player(int *line)
 {
   int   line_choice;
   int	count_line;
   int	nb_match;
 
   nb_match = 0;
-  line_choice = what_line(line);
+  if ((line_choice = what_line(line)) == - 2)
+    return (-1);
   count_line = how_many_line_remaining(line);
   how_many_match(line, line_choice, count_line, nb_match);
+  return (0);
 }
