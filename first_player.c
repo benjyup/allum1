@@ -5,13 +5,14 @@
 ** Login   <peixot_b@epitech.net>
 ** 
 ** Started on  Wed Feb 17 22:31:01 2016 Peixoto Benjamin
-** Last update Thu Feb 18 23:47:00 2016 Peixoto Benjamin
+** Last update Fri Feb 19 11:58:36 2016 Peixoto Benjamin
 */
 
 #include <stdlib.h>
 #include <stdio.h>
 #include "./lib/my/get_next_line.h"
 #include "allum1.h"
+#include "my.h"
 
 void	how_many_match3(int *line, int nb_match, int line_choice)
 {
@@ -39,7 +40,7 @@ int	how_many_match(int *line, int line_choice, int count_line, int nb_match)
       my_putstr("Matches: ");
       if ((str = get_next_line(0)) == NULL)
       	return (-1);
-      if ((nb_match = my_match_is_a_nb(str, line, line_choice)) != -1)
+      if ((nb_match = my_match_is_a_nb(str)) != -1)
 	how_many_match2(line, nb_match, line_choice);
       else
 	{
@@ -48,7 +49,7 @@ int	how_many_match(int *line, int line_choice, int count_line, int nb_match)
 	}
       if (line[nb_match] == 1 && count_line == 1)
 	{
-	  my_putstr("You lost, too bad..\n");
+	  my_putstr("You lost, too bad..\n\n");
 	  return (EXIT_SUCCESS);
 	}
       if (nb_match > 0 && nb_match <= line[line_choice])

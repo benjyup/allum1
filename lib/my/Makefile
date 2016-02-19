@@ -5,14 +5,11 @@
 ## Login   <peixot_b@epitech.net>
 ## 
 ## Started on  Mon Nov 23 12:40:09 2015 Peixoto Benjamin
-## Last update Thu Feb 18 14:19:18 2016 Peixoto Benjamin
+## Last update Fri Feb 19 12:07:50 2016 Peixoto Benjamin
 ##
 
 
-SRCS	= my_printf.c \
-	 my_getnbr.c \
-	 my_printf_fonctions_2.c \
-	 my_printf_fonctions.c \
+SRCS	= my_getnbr.c \
 	 my_putchar.c \
 	 my_put_nbr_base.c \
 	 my_put_nbr_base_unlong.c \

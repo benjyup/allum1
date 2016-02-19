@@ -5,11 +5,12 @@
 ** Login   <peixot_b@epitech.net>
 ** 
 ** Started on  Wed Feb 17 23:03:18 2016 Peixoto Benjamin
-** Last update Fri Feb 19 00:05:35 2016 Peixoto Benjamin
+** Last update Fri Feb 19 11:56:32 2016 Peixoto Benjamin
 */
 
 #include <stdlib.h>
 #include "allum1.h"
+#include "my.h"
 
 int	computer(int *line, int count_line, int i)
 {
@@ -30,12 +31,13 @@ int	computer(int *line, int count_line, int i)
 	  if (line[i] == 1)
 	    {
 	      remove_all_matches(line, i);
-	      my_putstr("I lost.. snif.. but I’ll get you next time!!\n");
+	      my_putstr("I lost.. snif.. but I’ll get you next time!!\n\n");
 	      return (EXIT_SUCCESS);
 	    }
 	}
       i = i + 1;
     }
+  return (0);
 }
 
 int	remove_partially_matches(int *line, int nb_line)
@@ -68,7 +70,7 @@ int	second_player(int *line)
 
   if (how_many_line_remaining(line) == 0)
     {
-      my_putstr("You lost, too bad..\n");
+      my_putstr("You lost, too bad..\n\n");
       return (EXIT_SUCCESS);
     }
   count_line = how_many_line_remaining(line);
@@ -82,4 +84,5 @@ int	second_player(int *line)
       count_line = how_many_line_remaining(line);
       computer(line, count_line, 0);
     }
+  return (0);
 }

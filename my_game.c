@@ -5,11 +5,12 @@
 ** Login   <peixot_b@epitech.net>
 ** 
 ** Started on  Wed Feb 17 21:50:19 2016 Peixoto Benjamin
-** Last update Thu Feb 18 23:02:22 2016 Peixoto Benjamin
+** Last update Fri Feb 19 11:50:39 2016 Peixoto Benjamin
 */
 
 #include <stdlib.h>
 #include "allum1.h"
+#include "my.h"
 
 int	how_many_line_remaining(int *line)
 {

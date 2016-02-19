@@ -5,14 +5,16 @@
 ## Login   <peixot_b@epitech.net>
 ## 
 ## Started on  Tue Feb  9 15:10:08 2016 Peixoto Benjamin
-## Last update Thu Feb 18 23:08:15 2016 Peixoto Benjamin
+## Last update Fri Feb 19 11:40:15 2016 Peixoto Benjamin
 ##
 
 NAME		=	allum1
 
 CC		=	gcc
 
-LDFLAGS		+= -L./lib -lmy -I./
+CFLAGS		+=	-I./include -Wall -W -Wextra
+
+LDFLAGS		= 	-L./lib -lmy
 
 RM		=	rm -f
 
