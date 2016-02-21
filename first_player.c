@@ -5,7 +5,7 @@
 ** Login   <peixot_b@epitech.net>
 ** 
 ** Started on  Wed Feb 17 22:31:01 2016 Peixoto Benjamin
-** Last update Sun Feb 21 17:22:55 2016 Peixoto Benjamin
+** Last update Sun Feb 21 23:17:59 2016 Peixoto Benjamin
 */
 
 #include <stdlib.h>
@@ -37,7 +37,6 @@ int	how_many_match(int *line, int line_choice, int count_line, int nb_match)
 
   while (666)
     {
-      my_putstr("Matches: ");
       if ((str = get_next_line(0)) == NULL)
       	return (-2);
       if ((nb_match = my_match_is_a_nb(str, line, line_choice)) != -1)
@@ -90,6 +89,7 @@ int     first_player(int *line)
   if ((line_choice = what_line(line)) == -2)
     return (-1);
   count_line = how_many_line_remaining(line);
+  my_putstr("Matches: ");
   if ((how_many_match(line, line_choice, count_line, nb_match)) == -2)
     return (-1);
   return (0);

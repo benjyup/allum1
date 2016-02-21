@@ -5,7 +5,7 @@
 ** Login   <peixot_b@epitech.net>
 ** 
 ** Started on  Wed Feb 17 23:03:18 2016 Peixoto Benjamin
-** Last update Sun Feb 21 16:52:24 2016 Peixoto Benjamin
+** Last update Sun Feb 21 23:20:20 2016 Peixoto Benjamin
 */
 
 #include <stdlib.h>
@@ -19,12 +19,12 @@ int	computer(int *line, int count_line, int i)
       if (line[i] != 0 && count_line >= 2)
 	{
 	  remove_all_matches(line, i);
-	  return (EXIT_SUCCESS);
+	  return (0);
 	}
       if (line[i] > 1)
 	{
 	  remove_partially_matches(line, i);
-	  return (EXIT_SUCCESS);
+	  return (0);
 	}
       if (count_line == 1)
 	{
@@ -32,7 +32,7 @@ int	computer(int *line, int count_line, int i)
 	    {
 	      remove_all_matches(line, i);
 	      my_putstr("I lost.. snif.. but I’ll get you next time!!\n");
-	      return (EXIT_SUCCESS);
+	      return (0);
 	    }
 	}
       i = i + 1;
@@ -49,7 +49,7 @@ int	remove_partially_matches(int *line, int nb_line)
   my_putchar('\n');
   line[nb_line] = 1;
   print_game_board(line);
-  return (EXIT_SUCCESS);
+  return (0);
 }
 
 int	remove_all_matches(int *line, int nb_line)
@@ -61,7 +61,7 @@ int	remove_all_matches(int *line, int nb_line)
   my_putchar('\n');
   line[nb_line] = 0;
   print_game_board(line);
-  return (EXIT_SUCCESS);
+  return (0);
 }
 
 int	second_player(int *line)
@@ -71,7 +71,7 @@ int	second_player(int *line)
   if (how_many_line_remaining(line) == 0)
     {
       my_putstr("You lost, too bad..\n");
-      return (EXIT_SUCCESS);
+      return (0);
     }
   count_line = how_many_line_remaining(line);
   if (count_line == 0)

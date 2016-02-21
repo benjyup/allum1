@@ -5,7 +5,7 @@
 ** Login   <peixot_b@epitech.net>
 ** 
 ** Started on  Tue Feb  9 15:12:04 2016 Peixoto Benjamin
-** Last update Sun Feb 21 16:50:30 2016 Peixoto Benjamin
+** Last update Sun Feb 21 23:19:06 2016 Peixoto Benjamin
 */
 
 #include <stdlib.h>
@@ -73,7 +73,7 @@ int	main()
   if (line == NULL)
     {
       my_putstr("Error with Malloc.\n");
-      exit(EXIT_FAILURE);
+      return (-1);
     }
   line[0] = 1;
   line[1] = 3;
