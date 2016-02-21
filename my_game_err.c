@@ -5,7 +5,7 @@
 ** Login   <peixot_b@epitech.net>
 ** 
 ** Started on  Thu Feb 18 22:11:19 2016 Peixoto Benjamin
-** Last update Fri Feb 19 11:59:04 2016 Peixoto Benjamin
+** Last update Sun Feb 21 15:25:03 2016 Peixoto Benjamin
 */
 
 #include <stdlib.h>
@@ -58,7 +58,7 @@ int	my_match_is_a_nb2(char *str)
   return (0);
 }
 
-int	my_match_is_a_nb(char *str)
+int	my_match_is_a_nb(char *str, int *line, int line_choice)
 {
   int	nb;
 
@@ -74,7 +74,7 @@ int	my_match_is_a_nb(char *str)
       my_putstr("Error: you have to remove at least one match\n");
       return (-1);
     }
-  if ((nb = my_getnbr(str)) > 7)
+  if ((nb = my_getnbr(str)) > 7 || nb > line[line_choice])
     {
       my_putstr("Error: not enough matches on this line\n");
       return (-1);

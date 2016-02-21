@@ -5,7 +5,7 @@
 ** Login   <peixot_b@epitech.net>
 ** 
 ** Started on  Wed Feb 17 22:31:01 2016 Peixoto Benjamin
-** Last update Fri Feb 19 12:43:42 2016 Peixoto Benjamin
+** Last update Sun Feb 21 15:25:55 2016 Peixoto Benjamin
 */
 
 #include <stdlib.h>
@@ -40,7 +40,7 @@ int	how_many_match(int *line, int line_choice, int count_line, int nb_match)
       my_putstr("Matches: ");
       if ((str = get_next_line(0)) == NULL)
       	return (-1);
-      if ((nb_match = my_match_is_a_nb(str)) != -1)
+      if ((nb_match = my_match_is_a_nb(str, line, line_choice)) != -1)
 	how_many_match2(line, nb_match, line_choice);
       else
 	{
@@ -49,7 +49,7 @@ int	how_many_match(int *line, int line_choice, int count_line, int nb_match)
 	}
       if (line[nb_match] == 1 && count_line == 1)
 	{
-	  my_putstr("You lost, too bad..\n\n");
+	  my_putstr("You lost, too bad..\n");
 	  return (EXIT_SUCCESS);
 	}
       if (nb_match > 0 && nb_match <= line[line_choice])
@@ -72,7 +72,7 @@ int     what_line(int *line)
       if ((str = get_next_line(0)) == NULL)
 	return (-2);
       line_choice = my_line_is_a_nb(str);
-      if (line[line_choice] == 0)
+      if (line[line_choice - 1] == 0)
 	my_putstr("Error: this line is empty\n");
       if (line_choice > 0 && line_choice < 6 && line[line_choice - 1] != 0)
 	return (line_choice - 1);

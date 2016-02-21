@@ -5,7 +5,7 @@
 ** Login   <peixot_b@epitech.net>
 ** 
 ** Started on  Thu Feb 18 22:54:07 2016 Peixoto Benjamin
-** Last update Fri Feb 19 12:28:56 2016 Peixoto Benjamin
+** Last update Sun Feb 21 15:26:11 2016 Peixoto Benjamin
 */
 
 #ifndef ALLUM1_H_
@@ -24,7 +24,7 @@ int	second_player(int *line);
 int	remove_all_matches(int *line, int nb_line);
 int	remove_partially_matches(int *line, int nb_line);
 int	computer(int *line, int count_line, int i);
-int	my_match_is_a_nb(char *str);
+int	my_match_is_a_nb(char *str, int *line, int line_choice);
 int	my_match_is_a_nb2(char *str);
 int	my_line_is_a_nb(char *str);
 

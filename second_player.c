@@ -5,7 +5,7 @@
 ** Login   <peixot_b@epitech.net>
 ** 
 ** Started on  Wed Feb 17 23:03:18 2016 Peixoto Benjamin
-** Last update Fri Feb 19 11:56:32 2016 Peixoto Benjamin
+** Last update Sun Feb 21 15:02:03 2016 Peixoto Benjamin
 */
 
 #include <stdlib.h>
@@ -70,7 +70,7 @@ int	second_player(int *line)
 
   if (how_many_line_remaining(line) == 0)
     {
-      my_putstr("You lost, too bad..\n\n");
+      my_putstr("You lost, too bad..\n");
       return (EXIT_SUCCESS);
     }
   count_line = how_many_line_remaining(line);
