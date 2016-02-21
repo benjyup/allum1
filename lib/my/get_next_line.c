@@ -5,7 +5,7 @@
 ** Login   <peixot_b@epitech.net>
 ** 
 ** Started on  Tue Jan 12 15:07:25 2016 Peixoto Benjamin
-** Last update Sun Feb 21 16:19:38 2016 Peixoto Benjamin
+** Last update Sun Feb 21 17:03:43 2016 Peixoto Benjamin
 */
 
 #include <fcntl.h>
@@ -15,10 +15,12 @@
 
 void	*xmalloc(unsigned int s)
 {
-  void *p;
+  void	*p;
 
   if ((p = malloc(s)) == 0)
-    my_putstr("Not enough memory.\n");
+    {
+      my_putstr("Not enough memory.\n");
+    }
   return (p);
 }
 
@@ -46,7 +48,7 @@ static char	*add_to_line(char *line, int cur, char *buff, int *start)
   int		old_len;
 
   old_len = (line) ? my_strlen(line) : 0;
-  new_elem = xmalloc((old_len + cur + 1) * sizeof(*new_elem));
+  new_elem = malloc((old_len + cur + 1) * sizeof(*new_elem));
   my_strncpy(new_elem, line ? line : "", old_len);
   my_strncpy(new_elem + old_len, buff + *start, cur);
   new_elem[old_len + cur] = 0;
@@ -59,28 +61,25 @@ static char	*add_to_line(char *line, int cur, char *buff, int *start)
 char		*get_next_line(const int fd)
 {
   static char	buff[READ_SIZE + 1];
-  static int	in_buf = 0;
+  static int	buf_base = 0;
   static int	start;
   int		cur;
   char		*line;
 
-  line = 0;
   cur = 0;
+  line = 0;
   while (1)
     {
-      if (start >= in_buf)
+      if (start >= buf_base)
         {
           start = 0;
-          if (!(in_buf = read(fd, buff, READ_SIZE)))
+          if (!(buf_base = read(fd, buff, READ_SIZE)))
             return (line);
-          /* if (in_buf == -1) */
-	  /*   return (-1); */
-            /* exit (EXIT_FAILURE + 0 * write (2, "Unable to read\n", 15)); */
           cur = 0;
         }
       if (buff[start + cur] == '\n')
         return (line = add_to_line(line, cur, buff, &start));
-      if (start + cur == in_buf - 1)
+      if (start + cur == buf_base - 1)
         line = add_to_line(line, cur + 1, buff, &start);
       ++cur;
     }

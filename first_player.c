@@ -5,7 +5,7 @@
 ** Login   <peixot_b@epitech.net>
 ** 
 ** Started on  Wed Feb 17 22:31:01 2016 Peixoto Benjamin
-** Last update Sun Feb 21 16:47:42 2016 Peixoto Benjamin
+** Last update Sun Feb 21 17:22:55 2016 Peixoto Benjamin
 */
 
 #include <stdlib.h>
@@ -44,8 +44,9 @@ int	how_many_match(int *line, int line_choice, int count_line, int nb_match)
 	how_many_match2(line, nb_match, line_choice);
       else
 	{
-	  first_player(line);
-	  return (-2);
+	  if ((first_player(line)) == - 1)
+	    return (-2);
+	  return (-1);
 	}
       if (line[nb_match] == 1 && count_line == 1)
 	{
