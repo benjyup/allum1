@@ -5,7 +5,7 @@
 ** Login   <peixot_b@epitech.net>
 ** 
 ** Started on  Wed Feb 17 23:03:18 2016 Peixoto Benjamin
-** Last update Sun Feb 21 15:02:03 2016 Peixoto Benjamin
+** Last update Sun Feb 21 16:52:24 2016 Peixoto Benjamin
 */
 
 #include <stdlib.h>
@@ -31,7 +31,7 @@ int	computer(int *line, int count_line, int i)
 	  if (line[i] == 1)
 	    {
 	      remove_all_matches(line, i);
-	      my_putstr("I lost.. snif.. but I’ll get you next time!!\n\n");
+	      my_putstr("I lost.. snif.. but I’ll get you next time!!\n");
 	      return (EXIT_SUCCESS);
 	    }
 	}
@@ -76,7 +76,7 @@ int	second_player(int *line)
   count_line = how_many_line_remaining(line);
   if (count_line == 0)
     exit (0);
-  my_putstr("AI’s turn...\n");
+  my_putstr("\nAI’s turn...\n");
   if (count_line == 5)
     remove_all_matches(line, 0);
   if (count_line < 5)

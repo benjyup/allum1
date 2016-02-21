@@ -5,7 +5,7 @@
 ** Login   <peixot_b@epitech.net>
 ** 
 ** Started on  Wed Feb 17 21:50:19 2016 Peixoto Benjamin
-** Last update Fri Feb 19 12:31:10 2016 Peixoto Benjamin
+** Last update Sun Feb 21 16:51:48 2016 Peixoto Benjamin
 */
 
 #include <stdlib.h>
@@ -35,12 +35,9 @@ int	my_game(int *line)
   count_line = how_many_line_remaining(line);
   while (count_line != 0)
     {
-      my_putstr("Your turn:\n");
+      my_putstr("\nYour turn:\n");
       if (first_player(line) == -1)
-	{
-	  my_putchar('\n');
 	  return (-1);
-	}
       second_player(line);
       count_line = how_many_line_remaining(line);
     }

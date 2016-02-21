@@ -5,7 +5,7 @@
 ** Login   <peixot_b@epitech.net>
 ** 
 ** Started on  Tue Feb  9 15:12:04 2016 Peixoto Benjamin
-** Last update Fri Feb 19 12:20:23 2016 Peixoto Benjamin
+** Last update Sun Feb 21 16:50:30 2016 Peixoto Benjamin
 */
 
 #include <stdlib.h>
@@ -62,7 +62,7 @@ void	print_game_board(int *line)
       print_match(line[i], nb_space);
       i = i + 1;
     }
-  my_putstr("*********\n\n");
+  my_putstr("*********\n");
 }
 
 int	main()
