@@ -5,7 +5,7 @@
 ** Login   <peixot_b@epitech.net>
 ** 
 ** Started on  Wed Feb 17 23:03:18 2016 Peixoto Benjamin
-** Last update Sun Feb 21 23:20:20 2016 Peixoto Benjamin
+** Last update Tue Feb 23 11:06:04 2016 Peixoto Benjamin
 */
 
 #include <stdlib.h>
@@ -76,7 +76,7 @@ int	second_player(int *line)
   count_line = how_many_line_remaining(line);
   if (count_line == 0)
     exit (0);
-  my_putstr("\nAI’s turn...\n");
+  my_putstr("\nAI's turn...\n");
   if (count_line == 5)
     remove_all_matches(line, 0);
   if (count_line < 5)
