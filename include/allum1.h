@@ -5,15 +5,17 @@
 ** Login   <peixot_b@epitech.net>
 ** 
 ** Started on  Thu Feb 18 22:54:07 2016 Peixoto Benjamin
-** Last update Sun Feb 21 23:21:09 2016 Peixoto Benjamin
+** Last update Thu Feb 25 23:15:16 2016 Peixoto Benjamin
 */
 
 #ifndef ALLUM1_H_
 # define ALLUM1_H_
 
 void	print_game_board(int *line);
-void	print_match(int nb_match, int nb_space);
-void	print_space(int nb_match, int nb_space, int j);
+void	print_match(int nb_match, int nb_line);
+void	print_space(int nb_match, int i);
+void	print_space_last(int nb_match, int i);
+void	nb_of_space(int nb_space);
 int	my_game(int *line);
 int	how_many_line_remaining(int *line);
 int	first_player(int *line);

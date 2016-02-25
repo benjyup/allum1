@@ -5,7 +5,7 @@
 ## Login   <peixot_b@epitech.net>
 ## 
 ## Started on  Tue Feb  9 15:10:08 2016 Peixoto Benjamin
-## Last update Fri Feb 19 11:40:15 2016 Peixoto Benjamin
+## Last update Thu Feb 25 22:22:35 2016 Peixoto Benjamin
 ##
 
 NAME		=	allum1
@@ -22,7 +22,8 @@ SRCS		=	main.c \
 			my_game.c \
 			first_player.c \
 			second_player.c \
-			my_game_err.c
+			my_game_err.c \
+			my_aff_game.c
 
 OBJS		=	$(SRCS:.c=.o)
 
