@@ -5,47 +5,39 @@
 ## Login   <peixot_b@epitech.net>
 ## 
 ## Started on  Tue Feb  9 15:10:08 2016 Peixoto Benjamin
-## Last update Thu Feb 25 22:22:35 2016 Peixoto Benjamin
+## Last update Tue Sep 26 11:32:33 2017 Benjamin
 ##
 
 NAME		=	allum1
 
 CC		=	gcc
 
-CFLAGS		+=	-I./include -Wall -W -Wextra
+CFLAGS		+=	-I./include
 
 LDFLAGS		= 	-L./lib -lmy
 
 RM		=	rm -f
 
-SRCS		=	main.c \
-			my_game.c \
-			first_player.c \
-			second_player.c \
-			my_game_err.c \
-			my_aff_game.c
+SRCS		=	srcs/main.c \
+			srcs/my_game.c \
+			srcs/first_player.c \
+			srcs/second_player.c \
+			srcs/my_game_err.c \
+			srcs/my_aff_game.c
 
 OBJS		=	$(SRCS:.c=.o)
 
-all: library $(NAME)
-
-library:
-	make -C lib/my
-
-library-re:
-	make -C lib/my re
+all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(CC) -o $(NAME) $(OBJS) $(LDFLAGS)
 
 clean:
-	make -C lib/my clean
 	$(RM) $(OBJS)
 
 fclean:	clean
-	make -C lib/my fclean
 	$(RM) $(NAME)
 
-re: fclean library-re all
+re: fclean all
 
-.PHONY:	library all clean fclean
+.PHONY:	all clean fclean
